@@ -1,5 +1,5 @@
 // 1. Declaración con inferencia de tipo inicial
-let x = 10;
+let x = 10000;
 console.log("Valor:", x, "| Tipo:", typeof x); 
 // Output: Valor: 10 | Tipo: number
 
