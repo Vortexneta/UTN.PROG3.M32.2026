@@ -1,5 +1,5 @@
 services:
-  node-dev:
+  node-dev:-d
     image: node:24-slim
     container_name: prog3_node
     working_dir: /app
