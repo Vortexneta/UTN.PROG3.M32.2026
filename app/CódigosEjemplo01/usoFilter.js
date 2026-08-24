@@ -12,8 +12,13 @@ const productos = [
 console.log('=== CATÁLOGO COMPLETO ===');
 console.table(productos);
 
-// Filtrar productos en stock y con precio mayor a $30
-const disponiblesYValiosos = productos.filter(p => p.stock && p.precio > 30);
+let precioMin = 60;
+precioMin = "Juancito";
+precioMin = 55;
 
-console.log('\n--- Productos en stock y > $30 (filter) ---');
+
+// Filtrar productos en stock y con precio mayor a $30
+const disponiblesYValiosos = productos.filter(p => p.stock && p.precio > precioMin);
+
+console.log('\n--- Productos en stock y > $'+ precioMin+' (filter) ---');
 console.table(disponiblesYValiosos);
