@@ -5,9 +5,10 @@
 const numeros = [1, 2, 3, 4];
 
 // ❌ ERROR COMÚN: Usar .map() sin `return` tratando de mutar algo externo
-const malUsoMap = numeros.map(n => {
-  n * 2; // Al no haber 'return', mapea cada valor a 'undefined'
-});
+
+const malUsoMap = numeros.map( n => { n*2 });
+// Al no haber 'return', mapea cada valor a 'undefined'
+
 
 console.log('❌ Resultado de map sin return:', malUsoMap);
 
