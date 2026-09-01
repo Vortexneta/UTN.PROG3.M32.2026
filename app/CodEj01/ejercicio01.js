@@ -35,7 +35,7 @@ const estudiantes = [
 
 // SOLUCIÓN DE FEDEDRICO:
 const estudiantesConPromedio = estudiantes.map(estudiante => {
-  //const promedio = (estudiante.parcial1 + estudiante.parcial2) / 2;
+  const promedio = (estudiante.parcial1 + estudiante.parcial2) / 2;
   /*let condicion = "";
   if (promedio >= 6) {
     condicion = 'APROBADO';
@@ -44,21 +44,29 @@ const estudiantesConPromedio = estudiantes.map(estudiante => {
   }*/
   return {
     ...estudiante, 
-    promedio: (estudiante.parcial1 + estudiante.parcial2) / 2,
-    condicion: estudiante.promedio >=6 ? 'APROBADO' : 'REPROBADO' 
+    promedio: promedio,
+    condicion: promedio >=6 ? 'APROBADO' : 'REPROBADO' 
   };
 });
 
 console.log("======== SOLUCIÓN FEDERICO ===============")
 console.table(estudiantesConPromedio);
 
-//Edgar Solution:
+//Edgar Solution:  OJO TODOS REPROBADOS
 
 const estudiantesConPromedio2 = estudiantes.map(e => ({
   ...e,
-  promedio: (e.parcial1 + e.parcial2) / 2,
-  condicion: e.promedio >= 6 ? "Aprobado" : "Recupera"
+  promedio:  (e.parcial1 + e.parcial2) / 2,
+  condicion: ((e.parcial1 + e.parcial2) / 2)>= 6 ? "Aprobado" : "Recupera"
 }));
 
 console.log("======== SOLUCIÓN EDGAR ===============")
 console.table(estudiantesConPromedio2);
+
+//RENDERIZACIÓN ANTONELLA
+
+const listaEstudiantes = estudiantesConPromedio.map(estudiante =>
+  (`<li> ${estudiante.nombre} - promedio: ${ estudiante.promedio } (${estudiante.condicion }) </li>`))
+const textoHTML = "<ul> \n"+ listaEstudiantes.join('\n')+ "\n</ul>";  // joinea en la cadena textoHTML.
+console.log('--- ESTUDIANTES ---');
+console.log(textoHTML);                   // muestra la cadena.
