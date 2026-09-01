@@ -36,7 +36,7 @@ const estudiantes = [
 const estudiantesConPromedio = estudiantes.map(est => ({
   ...est,
   promedio: (est.parcial1 + est.parcial2) / 2,
-  condicion: (est.parcial + est.parcial2) / 2 >= 6 ? 'APROBADO' : 'RECUPERA'
+  condicion: (est.parcial1 + est.parcial2) / 2 >= 6 ? 'APROBADO' : 'RECUPERA'
 }));
 
 const estMap = estudiantesConPromedio
