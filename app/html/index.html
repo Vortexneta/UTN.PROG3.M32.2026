@@ -1,13 +1,91 @@
 <!DOCTYPE html> 
-<html lang="es">
-<head> 
- <meta charset="iso-8859-1"> 
- <meta name="description" content="Ejemplo de HTML5"> 
- <meta name="keywords" content="HTML5, CSS3, JavaScript"> 
- <title>Este texto es el título del documento</title> 
- <link rel="stylesheet" href="misestilos.css"> 
-</head> 
-<body> 
+  <html lang="es">
+    <head> 
+       <meta charset="iso-8859-1">
+       <meta name="description" content="Ejemplo de HTML5"> 
+       <meta name="keywords" content="HTML5, CSS3, JavaScript"> 
+       <title>Este texto es el título del documento</title> 
+       
+       <link rel="stylesheet" href="misestilos.css"> 
+       <style>
+        .P001 {
+            color : orange;
+        }
+       </style>
+    </head> 
+  
+    <body> 
+        <font face="Verdana"> 
+        <h1 style="color: Red">T&iacute;tulo</h1>
+        <h2 style="color: Blue">Regístrese:</h2>
+
+ <form action="procesa.php" method="GET">
  
-</body> 
+<label for="usuario">usuario</label> 
+<input type="text" name="usuario"> <br> 
+ 
+<label for="clave">Clave</label>
+<input type="password" name="clave"> <br>       
+            
+Tipo 
+<select name="tipo">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<br>
+
+Rojo <input type="radio" name="r1" value="rojo"> &nbsp;
+Verde <input type="radio" name="r1" value="verde"> &nbsp;
+Azul <input type="radio" name="r1" value="azul"> &nbsp;
+<p></p>
+Hoy <input type="checkbox" value="hoy" name="hoy" &nbsp; <br>
+Mañana <input type="checkbox" value="mañana" name="mañana" &nbsp; <br>
+pasado <input type="checkbox" value="pasado" name="pasado" &nbsp; <br>
+<br><br>
+Comentario:<br>
+<textarea cols="20" rows="4" name="comentario">
+
+</textarea>
+ 
+
+<br><input type="submit" value="ENVIAR">
+
+
+        </form>
+
+
+
+
+
+    <p class="P001">
+      
+      <a href="http://bocajuniors.com.ar"> 
+         <img src="https://cdn.prod.website-files.com/67dda54c2d07873ce72d5ff4/6a950e26ad24ccd7ba56275e_kimberley%20final.avif" width="150">
+        </a>
+    </p>
+
+
+    <p class="P002">
+        <ul>
+            <li>
+                <a href="http://microsoft.com">Microsoft</a>    
+            </li>
+            <li><a href="http://cisco.com">Cisco</a> </li>
+            <li><a href="http://bocajuniors.com.ar">Boquita</a> </li>
+            <li><a href="http://tomasarnda.com">Tom&aacute;s</a> </li>
+        </ul>
+    </p>
+
+    <p>
+        SEO : <meta...> description y keywords sirven para 
+                    SEO: Search Engine Optimization
+    </p>
+
+       <p>
+        <a href="http://utn.edu.ar" target="_blank"> Abrir IP UTN </a>
+      </p>
+
+    </font>
+    </body> 
 </html> 
